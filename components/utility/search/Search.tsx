@@ -8,10 +8,13 @@ const Search: React.FC<ISearch> = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault();
-      alert(searchTerm);
-    }} className="flex flex-col items-center gap-y-5">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        alert(searchTerm);
+      }}
+      className="flex flex-col items-center gap-y-5"
+    >
       <input
         type="text"
         value={searchTerm}
