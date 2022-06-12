@@ -20,10 +20,12 @@ module.exports = {
     extend: {
       colors: {
         blue: {
+          // here we're overrriding blue 500 to be the exact colour of google's blue color
           500: '#1a73e8',
         },
       },
       spacing: {
+        // by default the width only goes to 96 max
         128: '32rem',
       },
     },

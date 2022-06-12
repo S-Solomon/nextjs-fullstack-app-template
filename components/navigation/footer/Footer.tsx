@@ -1,12 +1,14 @@
-export interface IFooter {
-  sampleTextProp: string;
-}
+export interface IFooter extends React.ComponentPropsWithoutRef<'footer'> {}
 
-const Footer: React.FC<IFooter> = ({ sampleTextProp }) => {
+const Footer: React.FC<IFooter> = ({ className, ...footerProps }) => {
+  // Extend the htmlfooterprops and spread them on the footer incase we want to use them
   return (
-    <div className="bg-gradient-to-r from-cyan-500 to-blue-500">
-      {sampleTextProp}
-    </div>
+    <footer
+      {...footerProps}
+      className={`w-full p-5 bg-slate-100 text-slate-500 ${className}`}
+    >
+      <p>UK</p>
+    </footer>
   );
 };
 
